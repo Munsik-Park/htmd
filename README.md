@@ -49,6 +49,28 @@ HTMD-->
 
 `.htmd` — browsers treat it as HTML (with proper content-type), and AI tooling recognizes the dual-layer convention.
 
+## Quick Start
+
+`.htmd` files must be served over HTTP to render correctly — browsers display them as plain text when opened via `file://`.
+
+### Python (port 8000)
+
+```bash
+python3 tools/serve.py
+```
+
+Then open [http://localhost:8000/examples/hello.htmd](http://localhost:8000/examples/hello.htmd).
+
+### Node.js (port 3000)
+
+```bash
+node tools/serve.js
+```
+
+Then open [http://localhost:3000/examples/hello.htmd](http://localhost:3000/examples/hello.htmd).
+
+Both servers serve `.htmd` files with `Content-Type: text/html` so your browser renders them as HTML.
+
 ## Project Status
 
 This project is in the **specification phase**. See [SPEC.md](SPEC.md) for the format specification.
