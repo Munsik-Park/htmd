@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>HTMD Example - Hello</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #333; }
+    h1 { color: #1a1a2e; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; }
+    .info { background: #f8f9fa; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+    .info strong { color: #16213e; }
+    .status { display: inline-block; padding: 0.2rem 0.8rem; border-radius: 12px; font-size: 0.85rem; font-weight: 600; }
+    .status.active { background: #d4edda; color: #155724; }
+    ul { line-height: 1.8; }
+  </style>
+</head>
+<body>
+
+<!--HTMD
+# document_metadata
+- type: project_brief
+- version: 1.0
+- language: ko
+- created: 2026-03-16
+- author: munsik_park
+HTMD-->
+
+<!--HTMD
+# project_overview
+- name: htmd
+- full_name: HyperText MarkDown
+- status: active
+- description: a dual-layer document format for ai and human coexistence
+- repository: https://github.com/Munsik-Park/htmd
+HTMD-->
+
+<h1>HTMD - HyperText MarkDown</h1>
+<div class="info">
+  <p><strong>상태:</strong> <span class="status active">활성</span></p>
+  <p><strong>설명:</strong> AI와 사람이 공존하는 이중 레이어 문서 포맷</p>
+  <p><strong>저장소:</strong> <a href="https://github.com/Munsik-Park/htmd">GitHub</a></p>
+</div>
+
+<!--HTMD
+# core_concept
+- md_block: ai reads this, always english, structured markdown inside html comments
+- html_block: humans see this, localized language, rendered by browser
+- file_extension: .htmd
+- single_source_of_truth: md_block
+- html_generation: ai generates html from md in target language
+HTMD-->
+
+<h2>핵심 개념</h2>
+<ul>
+  <li><strong>MD 블록:</strong> AI가 읽는 영역. 항상 영어. HTML 주석 안의 구조화된 Markdown.</li>
+  <li><strong>HTML 블록:</strong> 사람이 보는 영역. 사용자의 언어로 브라우저가 렌더링.</li>
+  <li><strong>파일 확장자:</strong> <code>.htmd</code></li>
+  <li><strong>단일 원본:</strong> MD 블록이 원본이며, HTML은 MD에서 파생됩니다.</li>
+</ul>
+
+<!--HTMD
+# how_it_works
+- step_1: ai writes or updates md blocks in english
+- step_2: ai generates corresponding html blocks in user language
+- step_3: browser renders html, ignores md blocks (html comments)
+- step_4: ai reads md blocks, ignores html blocks
+- result: one file serves both ai and human consumers
+HTMD-->
+
+<h2>동작 방식</h2>
+<ol>
+  <li>AI가 MD 블록을 영어로 작성하거나 업데이트합니다.</li>
+  <li>AI가 대응하는 HTML 블록을 사용자 언어로 생성합니다.</li>
+  <li>브라우저는 HTML을 렌더링하고, MD 블록(HTML 주석)은 무시합니다.</li>
+  <li>AI는 MD 블록만 읽고, HTML 블록은 무시합니다.</li>
+  <li><strong>결과:</strong> 하나의 파일이 AI와 사람 모두에게 서비스됩니다.</li>
+</ol>
+
+</body>
+</html>
