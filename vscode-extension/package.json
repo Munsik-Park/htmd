@@ -1,0 +1,74 @@
+{
+  "name": "htmd",
+  "displayName": "HTMD",
+  "description": "Preview and syntax support for .htmd (HyperText MarkDown) files",
+  "version": "0.1.0",
+  "publisher": "htmd",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "htmd",
+        "extensions": [".htmd"],
+        "aliases": ["HTMD", "htmd"],
+        "mimetypes": ["text/html"]
+      }
+    ],
+    "customEditors": [
+      {
+        "viewType": "htmd.preview",
+        "displayName": "HTMD Preview",
+        "selector": [{ "filenamePattern": "*.htmd" }],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "htmd.openPreview",
+        "title": "HTMD: Open Preview",
+        "icon": "$(open-preview)"
+      },
+      {
+        "command": "htmd.openMdPreview",
+        "title": "HTMD: Open MD Preview",
+        "icon": "$(markdown)"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "htmd.openPreview",
+          "when": "resourceExtname == .htmd",
+          "group": "navigation"
+        },
+        {
+          "command": "htmd.openMdPreview",
+          "when": "resourceExtname == .htmd",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "htmd.openPreview",
+          "when": "resourceExtname == .htmd",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.3.0"
+  }
+}
